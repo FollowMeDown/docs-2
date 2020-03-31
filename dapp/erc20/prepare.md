@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Preparation
 
 Before we start development of an ERC20 contract, we'll first prepare the repository. The code will be organized into 3 separate crates: `logic`, `contract` and `tests`.
@@ -6,6 +7,15 @@ We'll then start with generating a new project and applying a few changes as fol
 
 1. Generate a new project using [cargo-casperLabs](setup-of-rust-contract-sdk.html#cargo-casperlabs).
 
+=======
+# Prepare
+
+Before we start the development, let's prepare the repository first.
+
+The code will be divided into 3 crates: `logic`, `contract` and `tests`. Let's start with generating a new project and applying a few changes.
+
+Generate a new project using [Cargo CasperLabs](../setup-of-rust-contract-sdk#cargo-casperlabs).
+>>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
 ```bash
 $ cargo casperlabs erc20-tutorial
 $ cd erc20-tutorial
@@ -30,10 +40,14 @@ $ tree
 5 directories, 10 files
 ```
 
+<<<<<<< HEAD
 Note: We highly recommend working within one [Cargo Workspace](https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.html), rather than separated crates. This is until and unless we are creating multiple implementations of an ERC20, in which case, each implementation should have it's own workspace.
 
 1. Create a new file `Cargo.toml` in the root directory:
 
+=======
+It's better to have one [Cargo Workspace](https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.html) rather than separated crates. Create a new file `Cargo.toml` in the root directory.
+>>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
 ```toml
 # Cargo.toml
 
@@ -45,6 +59,7 @@ members = [
 ]
 ```
 
+<<<<<<< HEAD
 The project will have only one `target` directory placed in the root, so `tests/build.rs` has to be adjusted as follows:
 
 1. Change 
@@ -71,16 +86,45 @@ const BUILD_ARGS: [&str; 4] = ["build", "--release", "-p", "contract"];
 
 1. Finally, remove `rust-toolchain` files from `contract` and `tests` crates, and make just one crate in the root directory:
 
+=======
+
+Now the project will have only one `target` directory placed in the root directory, so `tests/build.rs` must be adjusted. Change
+```
+const ORIGINAL_WASM_DIR: &str = "../contract/target/wasm32-unknown-unknown/release";
+```
+to
+```
+const ORIGINAL_WASM_DIR: &str = "../target/wasm32-unknown-unknown/release";
+```
+
+When building WASM file we don't want to build all crates, but only the `contract` one. Change
+```
+const BUILD_ARGS: [&str; 2] = ["build", "--release"];
+```
+to
+```
+const BUILD_ARGS: [&str; 4] = ["build", "--release", "-p", "contract"];
+```
+
+Finally remove `rust-toolchain` files from `contract` and `tests` crates and make just one in the root directory.
+>>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
 ```bash
 $ rm contract/rust-toolchain
 $ mv tests/rust-toolchain .
 ```
 
+<<<<<<< HEAD
 1. Test the changes by compiling `contract` crate, and then running the test on `tests` crate.
+=======
+Test the changes by compiling `contract` crate and executing `cargo test` on `tests` crate.
+>>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
 
 ```bash
 $ cargo build --release -p contract 
 $ cargo test -p tests
 ```
+<<<<<<< HEAD
 
 TODO: fix required `--target wasm32-unknown-unknown`
+=======
+>>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108

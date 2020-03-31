@@ -14,6 +14,7 @@ CasperLabs Blockchain.
    deploying-contracts
    graphql
    execution-error-codes
+<<<<<<< HEAD
 <<<<<<< Updated upstream
    erc20/index
    eco-315-erc20docs/index
@@ -21,3 +22,6 @@ CasperLabs Blockchain.
 =======
    eco-315-erc20docs/index
 >>>>>>> Stashed changes
+=======
+   erc20/index
+>>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
