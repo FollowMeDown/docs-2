@@ -1,6 +1,7 @@
 # Logic
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## ERC-20 Standard
 Before starting, we highly recommend a careful reading of the [ERC-20 Token Standard](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#) that provides for the definition of the following methods we'll implement:
 
@@ -20,6 +21,8 @@ Here we will implement the logic of the ERC20. To make it testable and easly usa
 1. Generate a new `logic` crate
 
 =======
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 Full example of the `logic` crate is available on our [CasperLabs/erc20](https://github.com/CasperLabs/erc20/tree/master/logic) repository
 
 ## ERC-20 Standard
@@ -36,11 +39,15 @@ The ERC-20 standard is defined in [an Ethereum Improvement Proposal (EIP)](https
 One of the great benefits of writing smart contracts in Rust is that we can write a lot of code as a standalone library and use it later to implement smart contracts. In this section we will implement the logic of ERC-20. To make it testable, and easy to use later in smart contracts, we will make all the memory operations abstract.
 
 Generate a new `logic` crate.
+<<<<<<< HEAD
 >>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 ```
 $ cargo new logic --lib
 warning: compiling this new crate may not work due to invalid workspace configuration
 ```
+<<<<<<< HEAD
 <<<<<<< HEAD
 Cargo reminds us to add `logic` to the current workspace, 
 
@@ -49,6 +56,9 @@ Cargo reminds us to add `logic` to the current workspace,
 =======
 Cargo reminds us to add `logic` to the current workspace, so let's modify `Cargo.toml` in the root directory.
 >>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
+=======
+Cargo reminds us to add `logic` to the current workspace, so let's modify `Cargo.toml` in the root directory.
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 ```toml
 # Cargo.toml
 
@@ -61,6 +71,7 @@ members = [
 ]
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 1. Run `logic` tests to see it work:
 
 ```bash
@@ -69,6 +80,8 @@ $ cargo test -p logic
 1. Prepare `logic/Cargo.toml`:
 
 =======
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 Run `logic` tests to see it works.
 ```bash
 $ cargo test -p logic
@@ -76,7 +89,10 @@ $ cargo test -p logic
 
 ## Cargo.toml
 Prepare `logic/Cargo.toml`.
+<<<<<<< HEAD
 >>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 ```toml
 # logic/Cargo.toml
 
@@ -97,10 +113,14 @@ num-traits = { version = "0.2.10", default-features = false }
 
 ## ERC20Trait
 <<<<<<< HEAD
+<<<<<<< HEAD
 The logic will be implemented as an `ERC20Trait` trait:
 =======
 The logic will be implemented as an `ERC20Trait` trait.
 >>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
+=======
+The logic will be implemented as an `ERC20Trait` trait.
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 ```rust
 // logic/src/lib.rs
 
@@ -111,17 +131,23 @@ pub trait ERC20Trait<
 {}
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 `Amount` and `Address` generics allows for flexibilty in types definitions on the implementation.
 
 ## Reads and Writes
 1. Next, we add abstract functions which handle data saves and reads:
 
 =======
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 The `Amount` and `Address` type parameters allow for flexibility in the types used in concrete implementations of the trait (e.g. implementation in tests and implementation in smart contracts).
 
 ## Reads and Writes
 Next things to add are abstract functions, that handle data saves and reads.
+<<<<<<< HEAD
 >>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 ```rust
 // logic/src/lib.rs
 
@@ -140,6 +166,7 @@ pub trait ERC20Trait<
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Total Supply, Balance and Approval
 1. We are now ready to define the first among the ERC20 methods including the implementation of `balance_of`, `total_supply` , and `allowance`,  all of which are read-only methods:
 
@@ -155,6 +182,8 @@ fn total_supply(&mut self) -> Amount {
 fn allowance(&mut self, owner: &Address, spender: &Address) -> Amount {
     self.read_allowance(owner, spender).unwrap_or_else(Amount::zero)
 =======
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 ## Total Supply, Balance and Allowance
 We are ready now to define first ERC-20 methods. Below is the implementation of `balance_of`, `total_supply` and `allowance` inside the `ERC20Trait`. These are read-only methods.
 ```rust
@@ -172,11 +201,15 @@ pub trait ERC20Trait<...> {
     fn allowance(&mut self, owner: &Address, spender: &Address) -> Amount {
         self.read_allowance(owner, spender).unwrap_or_else(Amount::zero)
     }
+<<<<<<< HEAD
 >>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 }
 ```
 
 ## Mint
+<<<<<<< HEAD
 <<<<<<< HEAD
 1. Next,  we'll define what is called the `mint` method -- though not a part of ERC20 specification, it's present in almost every ERC20 implementation and responsable for incrementing the balance of tokens for the given `Address`. Addtionally, `mint`  should also update the total supply as well.
 
@@ -187,6 +220,8 @@ fn mint(&mut self, address: &Address, amount: Amount) {
     self.save_balance(&address, address_balance + amount);
     self.save_total_supply(total_supply + amount);
 =======
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 Next method to define inside the `ERC20Trait` is called `mint`. It's not a part of the ERC-20 specification, but it's present in almost every ERC-20 implementation. Its responsibility is incrementing the balance of tokens for the given `address`. It should update the total supply as well.
 ```rust
 // logic/src/lib.rs
@@ -198,11 +233,15 @@ pub trait ERC20Trait<...> {
         self.save_balance(&address, address_balance + amount);
         self.save_total_supply(total_supply + amount);
     }
+<<<<<<< HEAD
 >>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 }
 ```
 
 ## Errors
+<<<<<<< HEAD
 <<<<<<< HEAD
 Further implementation of `transfer` and `transfer_from` will be able to throw errors.
 
@@ -211,6 +250,9 @@ Further implementation of `transfer` and `transfer_from` will be able to throw e
 =======
 Further implementation of `transfer` and `transfer_from` will be able to throw errors. Let's define them in the separate file and have them ready for later.
 >>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
+=======
+Further implementation of `transfer` and `transfer_from` will be able to throw errors. Let's define them in the separate file and have them ready for later.
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 ```rust
 // logic/src/errors.rs
 
@@ -233,6 +275,7 @@ impl From<ERC20TransferError> for ERC20TransferFromError {
 ```
 
 ## Transfer
+<<<<<<< HEAD
 <<<<<<< HEAD
 1. Finally, we can implement the `transfer` method for transfering tokens from address to address. 
 
@@ -315,11 +358,16 @@ pub trait ERC20Trait<
     }
 
 =======
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 Finally we can implement `transfer` method, so it's possible to transfer tokens from `sender` address to `recipient` address. If the `sender` address has enough balance then tokens should be transferred to the `recipient` address. Otherwise return the `ERC20TransferError::NotEnoughBalance` error.
 ```rust
 pub trait ERC20Trait<...> {
     ...
+<<<<<<< HEAD
 >>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
     fn transfer(
         &mut self,
         sender: &Address,
@@ -336,6 +384,7 @@ pub trait ERC20Trait<...> {
             Ok(())
         }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     fn balance_of(&mut self, address: &Address) -> Amount {
@@ -356,6 +405,8 @@ pub trait ERC20Trait<...> {
     }
 
 =======
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 }
 ```
 
@@ -373,7 +424,10 @@ pub trait ERC20Trait<...> {
 ```rust
 pub trait ERC20Trait<...> {
     ...
+<<<<<<< HEAD
 >>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
     fn transfer_from(
         &mut self,
         spender: &Address,
@@ -390,6 +444,7 @@ pub trait ERC20Trait<...> {
         Ok(())
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ```
 
@@ -417,3 +472,7 @@ impl From<ERC20TransferError> for ERC20TransferFromError {
 ``` 
 Note, that internaly it uses `transfer` function. If transfer fails, the `ERC20TransferError` is automatically converted to `ERC20TransferFromError` thanks to the `impl From<ERC20TransferError> for ERC20TransferFromError` implementation in `logic/src/error.rs`.
 >>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
+=======
+``` 
+Note, that internaly it uses `transfer` function. If transfer fails, the `ERC20TransferError` is automatically converted to `ERC20TransferFromError` thanks to the `impl From<ERC20TransferError> for ERC20TransferFromError` implementation in `logic/src/error.rs`.
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720

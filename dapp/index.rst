@@ -15,6 +15,7 @@ CasperLabs Blockchain.
    graphql
    execution-error-codes
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
    erc20/index
    eco-315-erc20docs/index
@@ -25,3 +26,6 @@ CasperLabs Blockchain.
 =======
    erc20/index
 >>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
+=======
+   erc20/index
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720

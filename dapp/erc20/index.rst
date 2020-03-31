@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ERC20 Tutorial
 ==============
 
@@ -14,6 +15,8 @@ The final code is available on our Github `CasperLabs/erc20 <https://github.com/
    logic
    logic-test
 =======
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
 ERC-20 Tutorial
 ===============================
 
@@ -30,4 +33,7 @@ Content of the tutorial:
    logic-test
    contract
    contract-test
+<<<<<<< HEAD
 >>>>>>> 22e6a7df7d83eae009f0f66a080f8b69a1b8e108
+=======
+>>>>>>> b3992d12a37fede262d693ed174bc2fd31c2f720
