@@ -368,24 +368,24 @@ Quorum size is an integer value calculated as:
 
 .. math::
 
-   \textit{quorum} = ceiling\left(\frac{1}{2}\left(\frac{ftt}{1-2^{-k}}+w\right)\right)
+   \textit{quorum} = ceiling\left(\frac{1}{2}\left(\frac{\textit{ftt}}{1-2^{-k}}+w\right)\right)
 
 … where:
 
-- :math:`ftt` - absolute fault tolerance threshold
+- :math:`\textit{ftt}` - absolute fault tolerance threshold
 - :math:`w` - sum of weights of validators
 - :math:`k` - desired acknowledgement level of a summit we are trying to find
-- :math:`ceiling` - rounding towards positive infinity
+- :math:`\textit{ceiling}` - rounding towards positive infinity
 
 The formula can be rephrased to use relative ftt instead of absolute ftt:
 
 .. math::
 
-   \textit{quorum} = ceiling\left(\frac{w}{2}\left(\frac{rftt}{1-2^{-k}}+1\right)\right)
+   \textit{quorum} = ceiling\left(\frac{w}{2}\left(\frac{\textit{rftt}}{1-2^{-k}}+1\right)\right)
 
 … where:
 
-- :math:`rftt` - relative fault tolerance threshold (fractional value between 0 and 1); represents the maximal accepted
+- :math:`\textit{rftt}` - relative fault tolerance threshold (fractional value between 0 and 1); represents the maximal accepted
   total weight of malicious validators - as fraction of :math:`w`
 
 
@@ -510,6 +510,9 @@ Below is an example of 4-level summit for 8 validators (all having equal weights
     :width: 100%
     :align: center
 
+This is a simple case of a summit, where there are no equivocators and the domain of the base trimmer as well as
+the domain of every committee we calculate is the whole set of validators.
+
 Similarly to summits, messages also have "acknowledgement levels". We will say **K-level message** for a message with
 acknowledgement level K. Acknowledgement level for a message is optional. We will use the term **plain-message** to
 reference messages that do not have acknowledgement level.
@@ -518,10 +521,10 @@ The border of a message signals the following information:
 
 -  black border: plain message
 -  red border: 0-level message
--  yellow border: :math:`\textit{comm}_1-\textit{messages}` that are not :math:`\textit{comm}_1 \textit{values}`
--  green border: :math:`\textit{comm}_2-\textit{messages}` that are not :math:`\textit{comm}_2 \textit{values}`
--  lime border: :math:`\textit{comm}_3-\textit{messages}` that are not :math:`\textit{comm}_3 \textit{values}`
--  blue border: :math:`\textit{comm}_4-\textit{messages}` that are not :math:`\textit{comm}_4 \textit{values}`
+-  yellow border: messages that qualify for a committee in the context of the base trimmer
+-  green border: messages that qualify for a committee in the context of :math:`\textit{comm}_1`
+-  lime border: messages that qualify for a committee in the context of :math:`\textit{comm}_2`
+-  blue border: messages that qualify for a committee in the context of :math:`\textit{comm}_3`
 -  dashed border: this message has not arrived yet to validator 0; it is not part of j-dag as seen by validator 0
 
 Looking at border colors, it is easy to find subsequent committees.
@@ -550,7 +553,7 @@ Scala primer for non-scala developers:
     val localValidatorId: ValidatorId
 
     //variable declaration (a value can be assigned to a variable many times)
-    val localValidatorId: ValidatorId
+    var localValidatorId: ValidatorId
 
     //method declaration
     def containsPair(a: A, b: B): Boolean
