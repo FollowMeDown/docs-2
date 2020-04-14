@@ -28,11 +28,11 @@ details are specified in "CasperLabs Blockchain Design" chapter. The outline of 
 
 - **Abstract Casper Consensus** - presents the core consensus protocol we use; concepts such as estimator, finality and
   fault-tolerance threshold and summits are explained
-- **Brickdag** - introduces the transactions ledger structure - bricks, blocks, ballots, parents tree and justifications
+- **Transactions and blocks** - introduces the transactions ledger structure - bricks, blocks, ballots, parents tree and justifications
   graph
 - **Leaders and rounds** - explains the mechanics of "Flat Highway", i.e. when the set of validators is fixed
 - **Fork choice and finality** - applies the abstract Casper consensus to the brickdag
-- **Eras** - describes how we do stake management in Highway
+- **Eras and stake management** - describes how we do stake management in Highway
 - **Known limitations and features planned for ver 4.0** - sketches changes we anticipate to hit version 4.0 of this spec
 
 Research trace
