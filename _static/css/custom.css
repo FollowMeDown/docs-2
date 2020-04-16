@@ -22160,6 +22160,8 @@ pre .btnIcon:hover {
     --footer-font-size: 18px;
     --cls-4-font-size : 72px;
 
+    --casperlabs-color-slate: rgb(75, 79, 84);
+
     --casperlabs-color-red: #e1372d;
 
     --color-error : red;
@@ -22231,7 +22233,7 @@ span.error {
 /* icons https://fontawesome.com/cheatsheet */
 
 blockquote {
-    color           : var(--near-color-slate);
+    color           : var(--casperlabs-color-slate);
     border-left     : 8px solid var(--near-color-yellow-dark);
     background-color: var(--near-color-yellow-light);
 }
@@ -22260,9 +22262,9 @@ blockquote.danger:before {
 blockquote.lesson {
     background-color: #b9d8f1;
     border-left     : none;
-    border-top      : 10px solid var(--near-color-slate);
+    border-top      : 10px solid var(--casperlabs-color-slate);
     margin-bottom   : 1em;
-    color           : var(--near-color-slate);
+    color           : var(--casperlabs-color-slate);
 }
 
 blockquote.lesson:before {
@@ -22274,10 +22276,10 @@ blockquote.lesson span {
 }
 
 blockquote.success {
-    color           : var(--near-color-slate);
+    color           : var(--casperlabs-color-slate);
     background-color: #ccece1;
     border-left     : none;
-    border-bottom   : 10px solid var(--near-color-slate);
+    border-bottom   : 10px solid var(--casperlabs-color-slate);
 }
 
 blockquote.success:before {
@@ -22552,12 +22554,12 @@ span.arrow::after {
 
 .navGroupCategoryTitle {
     font-family: var(--near-font-headlines);
-    color      : var(--near-color-slate);
+    color      : var(--casperlabs-color-slate);
 }
 
 .navGroupSubcategoryTitle {
     font-family      : var(--near-font-headlines);
-    color            : var(--near-color-slate);
+    color            : var(--casperlabs-color-slate);
     font-variant-caps: all-petite-caps;
     margin-left      : 5px;
 }
@@ -22581,7 +22583,7 @@ span.arrow::after {
 
 /* left-side navigation highlight active item */
 .toc .toggleNav ul li.navListItemActive a {
-    color     : var(--near-color-slate);
+    color     : var(--casperlabs-color-slate);
     background: #ffeff0;
 
     border: 1px solid #ffd1d2;
@@ -22606,7 +22608,7 @@ a {
 }
 
 input#search_input_react {
-    background-color: var(--near-color-slate);
+    background-color: var(--casperlabs-color-slate);
 }
 
 /* hide the magnifying glass */
@@ -22681,11 +22683,11 @@ footer div.bg-black-25 ul li:nth-child(1) {
 }
 
 .footer-social-list .border-r-1 {
-    border-right: 1px solid var(--near-color-slate);
+    border-right: 1px solid var(--casperlabs-color-slate);
 }
 
 .footer-social-list .border-t-1 {
-    border-top: 1px solid var(--near-color-slate);
+    border-top: 1px solid var(--casperlabs-color-slate);
 }
 
 .cls-4 {
