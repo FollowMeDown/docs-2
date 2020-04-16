@@ -21,7 +21,7 @@ pre.literal-block, div[class^='highlight'] pre, .linenodiv pre {
     margin-top: 72px;
 }
 
-.wy-nav-side {
+.wy-nav-side ,.homeContainer{
     margin-top: 72px;
 }
 
@@ -22162,18 +22162,8 @@ pre .btnIcon:hover {
 
     --casperlabs-color-red: #e1372d;
 
-    --near-color-black       : #1a1c1f;
-    --near-color-slate       : #4b4f54;
-    --near-color-yellow-light: #fcfbe5;
-    --near-color-yellow      : #f0ec74;
-    --near-color-yellow-dark : #c5c25f;
-    --near-color-royal       : #0072ce;
-
     --color-error : red;
     --color-footer: #23262a;
-
-    --near-font-headlines: BwSeidoRound-Medium, sans-serif;
-    --near-font-body     : Benton-Sans, sans-serif;
 }
 
 body {
@@ -22557,7 +22547,7 @@ span.arrow::after {
 }
 
 .toc .toggleNav ul li a {
-    color: var(--near-color-royal);
+    color: white;
 }
 
 .navGroupCategoryTitle {
@@ -22604,7 +22594,7 @@ span.arrow::after {
 }
 
 a {
-    color: var(--near-color-royal);
+    color: white;
 }
 
 .fixedHeaderContainer header {

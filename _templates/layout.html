@@ -10,14 +10,14 @@
                                 Guide</a></li>
                         <li class=""><a href="/docs/roles/contributor/intro" target="_self">Core Contributors</a></li>
                         <li class=""><a href="/docs/roles/validator/intro" target="_self">Validators</a></li>
-                        <li class=""><a href="/"
-                                target="_blank">TechSpec</a></li>
-                        
+                        <li class=""><a href="/" target="_blank">TechSpec</a></li>
+
                         <li class="navSearchWrapper reactNavSearchWrapper"><span class="algolia-autocomplete"
                                 style="position: relative; display: inline-block; direction: ltr;">
                                 <div role="search">
-                                    <form id="rtd-search-form" class="wy-form" action="#" method="get" >
-                                        <input type="text" name="q" placeholder="Search docs" id="search_input_react" class="aa-input data-hj-whitelist">
+                                    <form id="rtd-search-form" class="wy-form" action="#" method="get">
+                                        <input type="text" name="q" placeholder="Search docs" id="search_input_react"
+                                            class="aa-input data-hj-whitelist">
                                         <input type="hidden" name="check_keywords" value="yes">
                                         <input type="hidden" name="area" value="default">
                                     </form>
@@ -27,7 +27,8 @@
                                 <span class="aa-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0"
                                     style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;">
                                     <div class="aa-dataset-1"></div>
-                                </span></span></li>
+                                </span>
+                            </span></li>
                         <li class=""><a href="/docs/api/quickstart" target="_self">API</a></li>
                         <li class=""><a href="/docs/community/quickstart" target="_self">Community</a></li>
                         <li class=""><a href="https://github.com/CasperLabs" target="_blank">GitHub</a></li>
@@ -41,27 +42,124 @@
 {% extends '!layout.html' %}
 
 {% block extrahead %}
-    <script type="text/javascript">
+<script type="text/javascript">
 
-        jQuery(function () {
-            switch (window.location.pathname) {
-                case "/":
-                    jQuery(".wy-grid-for-nav").css('display', 'none')
-                    jQuery(".homeContainer").css('display', 'block')
-                    jQuery(".footer").css('display', 'block')
-                    break;
-            
-                default:
-                    jQuery(".footer").css('display', 'none')
-                    jQuery(".homeContainer").css('display', 'none')
-                    break;
-            }
-        });
-    </script>
+    jQuery(function () {
+        switch (window.location.pathname) {
+            case "/":
+                jQuery(".wy-grid-for-nav").css('display', 'none')
+                jQuery(".homeContainer").css('display', 'block')
+                jQuery(".footer").css('display', 'block')
+                break;
+
+            default:
+                jQuery(".footer").css('display', 'none')
+                jQuery(".homeContainer").css('display', 'none')
+                break;
+        }
+    });
+</script>
 {% endblock %}
 
 {% block footer %}
-<div><div class="homeContainer"><div class="homeSplashFade"><div class="wrapper homeWrapper"><h1 align="center">This is home page!</h1><h1 align="center">I need a design for this page</h1><div class="buttonRow"><div class="left"><div class="pluginWrapper roleButtonWrapper"><a class="button" href="/docs/roles/developer/introduction"><div class="icon"><img src="/img/icon-developers.svg" alt="dApp Developer Guide" title="dApp Developer Guide" width="100"></div><div class="text"><h3>dApp Developer Guide</h3><p><strong>Slogan here</strong></p><div class="list"><ul class="subtle"><li>description here</li><li>description here</li><li>description here</li></ul></div></div></a></div><div class="pluginWrapper roleButtonWrapper"><a class="button" href="/docs/roles/validator/intro"><div class="icon"><img src="/img/icon-validators.svg" alt="Validators" title="Validators" width="100"></div><div class="text"><h3>Validators</h3><p><strong>Slogan here</strong></p><div class="list"><ul class="subtle"><li>description here</li><li>description here</li><li>description here</li></ul></div></div></a></div></div><div class="middle"><div class="pluginWrapper roleButtonWrapper core"><a class="button" href="https://techspec.casperlabs.io/en/latest/dapp/index.html"><div class="icon"><img src="/img/icon-core.svg" alt="basics" title="basics" width="100"></div><div class="text"><h3>basics</h3><p><strong>Slogan here</strong></p><div class="list"><ul class="subtle"><li>description here</li><li>description here</li><li>description here</li></ul></div></div></a></div></div><div class="right"><div class="pluginWrapper roleButtonWrapper"><a class="button" href="/docs/roles/integrator/quickstart"><div class="icon"><img src="/img/icon-integrators.svg" alt="TechSpec" title="TechSpec" width="100"></div><div class="text"><h3>TechSpec</h3><p><strong>Slogan here</strong></p><div class="list"><ul class="subtle"><li>description here</li><li>description here</li><li>description here</li></ul></div></div></a></div><div class="pluginWrapper roleButtonWrapper"><a class="button" href="/docs/roles/contributor/intro"><div class="icon"><img src="/img/icon-contributors.svg" alt="Core Contributors" title="Core Contributors" width="100"></div><div class="text"><h3>Core Contributors</h3><p><strong>Slogan here</strong></p><div class="list"><ul class="subtle"><li>description here</li><li>description here</li><li>description here</li></ul></div></div></a></div></div></div></div></div></div><div class="mainContainer"></div></div>
+<div>
+    <div class="homeContainer">
+        <div class="homeSplashFade">
+            <div class="wrapper homeWrapper">
+                <h1 align="center">This is home page!</h1>
+                <h1 align="center">I need a design for this page</h1>
+                <div class="buttonRow">
+                    <div class="left">
+                        <div class="pluginWrapper roleButtonWrapper"><a class="button"
+                                href="/docs/roles/developer/introduction">
+                                <div class="icon"><img src="/img/icon-developers.svg" alt="dApp Developer Guide"
+                                        title="dApp Developer Guide" width="100"></div>
+                                <div class="text">
+                                    <h3>dApp Developer Guide</h3>
+                                    <p><strong>Slogan here</strong></p>
+                                    <div class="list">
+                                        <ul class="subtle">
+                                            <li>description here</li>
+                                            <li>description here</li>
+                                            <li>description here</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a></div>
+                        <div class="pluginWrapper roleButtonWrapper"><a class="button"
+                                href="/docs/roles/validator/intro">
+                                <div class="icon"><img src="/img/icon-validators.svg" alt="Validators"
+                                        title="Validators" width="100"></div>
+                                <div class="text">
+                                    <h3>Validators</h3>
+                                    <p><strong>Slogan here</strong></p>
+                                    <div class="list">
+                                        <ul class="subtle">
+                                            <li>description here</li>
+                                            <li>description here</li>
+                                            <li>description here</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a></div>
+                    </div>
+                    <div class="middle">
+                        <div class="pluginWrapper roleButtonWrapper core"><a class="button"
+                                href="https://techspec.casperlabs.io/en/latest/dapp/index.html">
+                                <div class="icon"><img src="/img/icon-core.svg" alt="basics" title="basics" width="100">
+                                </div>
+                                <div class="text">
+                                    <h3>basics</h3>
+                                    <p><strong>Slogan here</strong></p>
+                                    <div class="list">
+                                        <ul class="subtle">
+                                            <li>description here</li>
+                                            <li>description here</li>
+                                            <li>description here</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a></div>
+                    </div>
+                    <div class="right">
+                        <div class="pluginWrapper roleButtonWrapper"><a class="button"
+                                href="/docs/roles/integrator/quickstart">
+                                <div class="icon"><img src="/img/icon-integrators.svg" alt="TechSpec" title="TechSpec"
+                                        width="100"></div>
+                                <div class="text">
+                                    <h3>TechSpec</h3>
+                                    <p><strong>Slogan here</strong></p>
+                                    <div class="list">
+                                        <ul class="subtle">
+                                            <li>description here</li>
+                                            <li>description here</li>
+                                            <li>description here</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a></div>
+                        <div class="pluginWrapper roleButtonWrapper"><a class="button"
+                                href="/docs/roles/contributor/intro">
+                                <div class="icon"><img src="/img/icon-contributors.svg" alt="Core Contributors"
+                                        title="Core Contributors" width="100"></div>
+                                <div class="text">
+                                    <h3>Core Contributors</h3>
+                                    <p><strong>Slogan here</strong></p>
+                                    <div class="list">
+                                        <ul class="subtle">
+                                            <li>description here</li>
+                                            <li>description here</li>
+                                            <li>description here</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="footer bg-gray-darker text-gray text-14 font-semibold">
     <div class="container max-w-none md:flex flex-wrap justify-between py-40">
