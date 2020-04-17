@@ -1,5 +1,29 @@
 @import 'theme.css';
 
+
+:root {
+    --h1-font-size: 32px;
+    --h2-font-size: 28px;
+    --h6-font-size: 20px;
+    --nav-font-size: 14px;
+    --footer-font-size: 18px;
+    --cls-4-font-size: 72px;
+
+    --casperlabs-color-red: #e1372d;
+
+    --casperlabs-color-black: #1a1c1f;
+    --casperlabs-color-slate: #4b4f54;
+    --casperlabs-color-yellow-light: #fcfbe5;
+    --casperlabs-color-yellow: #f0ec74;
+    --casperlabs-color-yellow-dark: #c5c25f;
+    --casperlabs-color-royal: #0072ce;
+
+    --color-error: red;
+    --color-footer: #23262a;
+
+    --casperlabs-font-headlines: BwSeidoRound-Medium, sans-serif;
+    --casperlabs-font-body: Benton-Sans, sans-serif;
+}
 body{
     font-family: "Arial", Helvetica, sans-serif;
 }
@@ -243,6 +267,159 @@ kbd {
     vertical-align: middle;
 }
 
+@media only screen and (min-width: 1135px) {
+    .buttonRow {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+@media only screen and (max-width: 1135px) {
+    .homeContainer h1 br {
+        display: block;
+    }
+
+    .buttonRow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .middle {
+        order: 1;
+    }
+
+    .left {
+        order: 2;
+    }
+
+    .right {
+        order: 3;
+    }
+
+    .middle, .left, .right {
+        width: 100%;
+    }
+
+    .homeContainer .roleButtonWrapper {
+        margin: 20px auto;
+    }
+
+    @media (max-width: 500px) {
+        .homeContainer .roleButtonWrapper {
+        width: auto !important;
+        height: auto !important;
+        }
+    }
+
+    .roleButtonWrapper.core a * {
+        text-align: left;
+    }
+
+    .roleButtonWrapper.core {
+        justify-content: left;
+        width: 400px;
+        height: 160px;
+    }
+
+    .roleButtonWrapper.core .icon {
+        padding-left: 0;
+    }
+
+    .roleButtonWrapper.core .button {
+        flex-direction: row;
+    }
+
+    .roleButtonWrapper.core .text h3 {
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .roleButtonWrapper.core .text p {
+        text-align: left;
+        padding-left: 10px;
+    }
+
+}
+
+.roleButtonWrapper {
+    border: 3px solid #E6E6E6;
+    border-radius: 10px;
+    text-align: left;
+    margin: 20px;
+    width: 400px;
+  }
+  
+  .roleButtonWrapper:hover {
+    background: #F6F5F3;
+  }
+  
+  .roleButtonWrapper a:hover {
+    background: none;
+    color: #000;
+  }
+  
+  .roleButtonWrapper h3 {
+    margin-top: 5px;
+  }
+  
+  .roleButtonWrapper .button {
+    display: flex;
+    border: none;
+    text-transform: unset;
+  }
+  
+  .roleButtonWrapper .icon {
+    margin: 5px 0 0 0;
+    text-align: center;
+    min-width: 120px;
+  }
+  
+  .roleButtonWrapper img {
+    margin-bottom: 20px;
+    margin-right: 10px;
+  }
+  
+  .roleButtonWrapper:not(.core) .list {
+    margin-left: -10px;
+  }
+  
+  .subtle {
+    font-size: 0.9em;
+    color: #a6a6a6;
+  }
+  
+  .roleButtonWrapper.core .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .roleButtonWrapper.core {
+    display: flex;
+    justify-content: center;
+    height: 358px;
+    width: 250px;
+  }
+  
+  .roleButtonWrapper.core .icon {
+    padding-left: 10px;
+  }
+  
+  .roleButtonWrapper.core .text h3 {
+    text-align: center;
+  }
+  
+  .roleButtonWrapper.core .text p {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .roleButtonWrapper.core .text .list {
+    text-align: left;
+  }
+  
 /* Buttons */
 .button {
     border         : 1px solid #000;
@@ -460,6 +637,13 @@ blockquote {
 
 /* End of Navbar */
 
+header {
+    background-color: #000;
+    color: white;
+    height: 75px;
+    padding: 30px 15px 10px 15px;
+    margin-top: -15px;
+}
 
 /* Search */
 input[type='search'] {
@@ -942,6 +1126,192 @@ input#search_input_react:active {
     }
 }
 
-a {
-    color: black;
+footer .menu-item a {
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+footer div.bg-black-25 ul {
+    margin: 0px;
+}
+
+footer div.bg-black-25 ul li:nth-child(1) {
+    padding-top: 3px;
+}
+
+.footer-social-list li:nth-child(1) {
+    margin: 3.5px 0px 0px;
+}
+
+.footer-social-list .border-r-1 {
+    border-right: 1px solid var(--casperlabs-color-slate);
+}
+
+.footer-social-list .border-t-1 {
+    border-top: 1px solid var(--casperlabs-color-slate);
+}
+.w-100p {
+    width: 100%;
+}
+
+.w-auto {
+    width: auto;
+}
+
+.xl\:-mb-40 {
+    margin-bottom: -40px;
+}
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.md\:justify-between {
+    justify-content: space-between;
+}
+
+.xl\:justify-between {
+    justify-content: space-between;
+}
+
+.py-40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.md\:py-40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.bg-gray-darker {
+    background-color: #121212;
+}
+
+.text-gray {
+    color: #777;
+}
+
+.text-14 {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .md\:flex {
+        display: flex;
+    }  
+}
+
+.ml-40 {
+    margin-left: 40px;
+}
+
+.max-w-none {
+    max-width: none;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+@media (min-width: 1200px) {
+    .xl\:w-auto {
+        width: auto;
+    }
+
+    .xl\:mb-0 {
+        margin-bottom: 0;
+    }
+
+    .md\:flex {
+        display: flex;
+    }
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.text-12 {
+    font-size: 12px;
+}
+
+.container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.list-reset {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-social-list li:nth-child(1) {
+    margin: 3.5px 0px 0px;
+}
+
+
+@media (min-width: 768px) {
+    .footer-social-list li {
+        position: relative;
+        padding: 15px;
+    }
+}
+
+footer .menu-item a {
+    color: white;
+}
+
+.footer-menu a:hover {
+    color: #e1372d;
+}
+
+footer a {
+    color: white;
+}
+
+.hover\:text-telegram:hover {
+    color: #08c;
+}
+
+.hover\:text-medium:hover {
+    color: #00ab6c;
+}
+
+.hover\:text-discord:hover {
+    color: #7289da;
+}
+
+.hover\:text-twitter:hover {
+    color: #1da1f2;
+}
+
+.hover\:text-instagram:hover {
+    color: #e1306c;
+}
+
+.hover\:text-facebook:hover {
+    color: #3b5998;
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
 }
