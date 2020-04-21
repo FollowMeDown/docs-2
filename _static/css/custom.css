@@ -574,6 +574,15 @@ blockquote {
 /* End of Home Container */
 
 /* Navbar */
+
+.fixedHeaderContainer header {
+    background-color: #000;
+    color: white;
+    height: 75px;
+    padding: 30px 15px 10px 15px;
+    margin-top: -15px;
+}
+
 .fixedHeaderContainer {
     background: #000;
     color     : #fff;
@@ -636,14 +645,6 @@ blockquote {
 }
 
 /* End of Navbar */
-
-header {
-    background-color: #000;
-    color: white;
-    height: 75px;
-    padding: 30px 15px 10px 15px;
-    margin-top: -15px;
-}
 
 /* Search */
 input[type='search'] {
@@ -1314,4 +1315,99 @@ footer a {
     -ms-user-select: none;
     user-select: none;
     pointer-events: none;
+}
+
+@media (min-width: 1200px) {
+    .xl\:flex {
+        display: flex;
+    }
+}
+
+.max-w-none {
+    max-width: none;
+}
+
+.items-center {
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+   .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    } 
+}
+
+@media (min-width: 1200px) {
+    .xl\:mt-0 {
+        margin-top: 0;
+    }    
+}
+
+.icon-36 {
+    width: 36px;
+    height: 36px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.footer a {
+    color: white;
+}
+
+svg {
+    fill: white;
+}
+
+li + li {
+    margin-top: 0.25em;
+}
+
+img.logo {
+    width: 184px;
+    position: absolute;
+    top: 19px;
+    left: 10px;
+    padding: 0;
+    margin: 0;
+    height: 51px!important;
+}
+
+.docMainWrapper .wrapper, .headerWrapper.wrapper, .wrapper {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+    .navigationSlider {
+        height: 34px;
+        position: relative;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .navigationSlider {
+        margin-left: 20%!important;
+    }    
+}
+
+@media only screen and (min-width: 1024px) {
+    .navigationSlider .slidingNav ul li a {
+        color: white;
+        letter-spacing: 0.11em;
+    }    
+}
+
+.navigationSlider .slidingNav ul li a:hover {
+    color: var(--casperlabs-color-red);
+}
+
+
+input#search_input_react {
+    background-color: var(--casperlabs-color-slate);
 }

@@ -103,7 +103,7 @@ html_static_path = ['_static']
 #     'css/custom.css',
 # ]
 
-html_style = 'css/custom.css'
+html_style = '/css/custom.css'
 
 
 # Custom sidebar templates, must be a dictionary that maps document names
