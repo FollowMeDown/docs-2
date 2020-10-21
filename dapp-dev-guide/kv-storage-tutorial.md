@@ -166,10 +166,11 @@ mod tests {
 ### Running Locally
 
 It's possible to run the unit tests locally- if you have set up the contract using [cargo-casperlabs](https://crates.io/cargo-casperlabs).
-The steps to set up the SDK are in the guide.
+The steps to set up the SDK are in the guide.  This command will build the contract and run the unit tests.  If all the tests pass, then the environment
+is set up correctly.
 
 ```bash
-cargo test -p tests
+make test
 ```
 
 ## Deploying to the Testnet and Interacting with the Contract
